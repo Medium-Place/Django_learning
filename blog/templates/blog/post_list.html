@@ -7,7 +7,7 @@
     <header>
         <h1>Welcome to the first iteration of my blog!!</h1>
     </header>
-
+    {% for post in posts %}
     <article>
         <time>published: 14.06.2014, 12:14</time>
         <h2><a href="">My first post</a></h2>
@@ -19,7 +19,8 @@
         <h2><a href="">The coolest thing I did this weekend</a></h2>
         <p>For the second post- the coolest thing I did this weeeknd was continue knitting the shades of blue sweater that I started a few weeks ago. I am currently on sleeve 1 out of 2 before I am done!! I am very excited about being able to finish and wear it!!</p>
     </article>
-
+    {% endfor %}
+    
     <p>Thanks for tuning in!</p>
     <p>See you at the same bat time, same bat channel!</p>
 </body>

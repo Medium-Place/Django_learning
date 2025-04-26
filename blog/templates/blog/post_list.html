@@ -8,24 +8,44 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 <body>
-    <header>
-        <h1>Welcome to the first iteration of my blog!!</h1>
+    <header class = "page-header">
+        <div class="container">
+        <h1><a href="/">Welcome to the first iteration of my blog!!</a></h1>
+        </div>
     </header>
-    {% for post in posts %}
-    <article>
-        <time>published: 14.06.2014, 12:14</time>
-        <h2><a href="">My first post</a></h2>
-        <p>Just to cover my bases, I am following a similar format to the tutorial when it comes to decorating my page!! Honestly this took me two tries before I was able to get everything to run correctly, but a win is a win!!!.</p>
-    </article>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                {% for post in posts %}
+                    <article class="post">
+                        <time class="date">
+                            {{ post.published_date: 14.04.2025, 12:14 }}
+                        </time>
+                        <h2><a href="">{{ post.title: My first post }}</a></h2>
+                        <p>{{ post.text|linebreaksbr: Just to cover my bases, I am following a similar format to the tutorial when it comes to decorating my page }}</p>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                {% for post in posts %}
+                    <article class="post">
+                        <time class="date">
+                            {{ post.published_date: 14.04.2025, 12:14 }}
+                        </time>
+                        <h2><a href="">{{ post.title: The coolest thing I did this weekend }}</a></h2>
+                        <p>{{ post.text|linebreaksbr: For the second post- the coolest thing I did this weeeknd was continue knitting the shades of blue sweater that I started a few weeks ago. I am currently on sleeve 1 of 2 before I am finished with it. }}</p>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </main>    
 
-    <article>
-        <time>published: 14.06.2014, 12:14</time>
-        <h2><a href="">The coolest thing I did this weekend</a></h2>
-        <p>For the second post- the coolest thing I did this weeeknd was continue knitting the shades of blue sweater that I started a few weeks ago. I am currently on sleeve 1 out of 2 before I am done!! I am very excited about being able to finish and wear it!!</p>
-    </article>
-    {% endfor %}
 
     <p>Thanks for tuning in!</p>
-    <p>See you at the same bat time, same bat channel!</p>
+    <p>See you at the same bat time, same bat channel</p>
 </body>
 </html>

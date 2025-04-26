@@ -19,10 +19,10 @@
                 {% for post in posts %}
                     <article class="post">
                         <time class="date">
-                            {{ post.published_date: 14.04.2025, 12:14 }}
+                            {{ post.published_date }}
                         </time>
-                        <h2><a href="">{{ post.title: My first post }}</a></h2>
-                        <p>{{ post.text|linebreaksbr: Just to cover my bases, I am following a similar format to the tutorial when it comes to decorating my page }}</p>
+                        <h2><a href="">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
                     </article>
                 {% endfor %}
             </div>
@@ -34,10 +34,10 @@
                 {% for post in posts %}
                     <article class="post">
                         <time class="date">
-                            {{ post.published_date: 14.04.2025, 12:14 }}
+                            {{ post.published_date }}
                         </time>
-                        <h2><a href="">{{ post.title: The coolest thing I did this weekend }}</a></h2>
-                        <p>{{ post.text|linebreaksbr: For the second post- the coolest thing I did this weeeknd was continue knitting the shades of blue sweater that I started a few weeks ago. I am currently on sleeve 1 of 2 before I am finished with it. }}</p>
+                        <h2><a href="">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
                     </article>
                 {% endfor %}
             </div>
